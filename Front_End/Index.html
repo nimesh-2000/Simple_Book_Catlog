@@ -8,51 +8,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<!-- ======= Header ======= -->
-<!--<header id="header" class="header fixed-top d-flex align-items-center">-->
-<!--    <div class="container d-flex align-items-center justify-content-between">-->
-
-<!--        <div id="logo">-->
-<!--            <h1><a href="index.html"><span>e</span>Startup</a></h1>-->
-<!--            &lt;!&ndash; Uncomment below if you prefer to use an image logo &ndash;&gt;-->
-<!--            &lt;!&ndash; <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>&ndash;&gt;-->
-<!--        </div>-->
-
-<!--        <nav id="navbar" class="navbar">-->
-<!--            <ul>-->
-<!--                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#about-us">About</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#features">Features</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#screenshots">Screenshots</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#team">Team</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>-->
-<!--                <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>-->
-<!--                    <ul>-->
-<!--                        <li><a href="#">Drop Down 1</a></li>-->
-<!--                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>-->
-<!--                            <ul>-->
-<!--                                <li><a href="#">Deep Drop Down 1</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 2</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 3</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 4</a></li>-->
-<!--                                <li><a href="#">Deep Drop Down 5</a></li>-->
-<!--                            </ul>-->
-<!--                        </li>-->
-<!--                        <li><a href="#">Drop Down 2</a></li>-->
-<!--                        <li><a href="#">Drop Down 3</a></li>-->
-<!--                        <li><a href="#">Drop Down 4</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>-->
-<!--            </ul>-->
-<!--            <i class="bi bi-list mobile-nav-toggle"></i>-->
-<!--        </nav>&lt;!&ndash; .navbar &ndash;&gt;-->
-
-<!--    </div>-->
-<!--</header>&lt;!&ndash; End Header &ndash;&gt;-->
-
-<!-- ======= Hero Section ======= -->
-<section id="hero">
+<section id="hero" style="display: block">
     <div class="hero-container" data-aos="fade-in">
         <h1>Welcome to Book Catalog</h1>
         <h2>Every book provides you an opportunity to learn and explore new ideas</h2>
@@ -66,7 +22,7 @@
     </div>
 </section><!-- End Hero Section -->
 
-<main>
+<main id="signUp" style="display: none">
     <section class="vh-100 bg-image"
              style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -119,7 +75,7 @@
         </div>
     </section>
 </main>
-<main>
+<main id="login" style="display: none">
     <section class="vh-100 bg-image"
              style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -157,7 +113,7 @@
         </div>
     </section>
 </main>
-<main>
+<main id="table" style="display: none">
 
         <div class="col-4">
             <h1 style="color: #71c55d;font-size: 30px;">Manage Books</h1>
@@ -183,15 +139,11 @@
                     <span class="control-error" id="lblbookauthor"></span>
                 </div>
                 <div class="form-group">
-                    <label class="">Price :</label>
+                    <label class="">Price </label>
                     <input class="form-control" id="txtBookPrice" type="text" name="price">
                     <span class="control-error" id="lblbookprice"></span>
                 </div>
-                <div class="form-groupInD">
-                    <label for="txtDate">Date</label>
-                    <input class="form-control" id="txtDate" type="date" name="date">
-                    <span class="control-error" id="lblday"></span>
-                </div>
+
 
 
             </form>
