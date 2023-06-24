@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Data
 @ToString
-public class BookDto {
+public class BookDTO {
         private String bookId;
         private String category;
         private String title;
