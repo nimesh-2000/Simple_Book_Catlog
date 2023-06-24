@@ -7,7 +7,9 @@ import lk.ijse.boot.service.BookService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,8 @@ import java.util.List;
  * @author nimesh denuwana on 6/25/2023.
  * @project Back_End
  */
+@Service
+@Transactional
 public class BookServiceImpl implements BookService {
     @Autowired
     private ModelMapper mapper;
