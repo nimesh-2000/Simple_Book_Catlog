@@ -2,7 +2,11 @@ package lk.ijse.boot.service.impl;
 
 import lk.ijse.boot.dto.BookDTO;
 import lk.ijse.boot.entity.Book;
+import lk.ijse.boot.repo.BookRepo;
 import lk.ijse.boot.service.BookService;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,11 @@ import java.util.List;
  * @project Back_End
  */
 public class BookServiceImpl implements BookService {
+    @Autowired
+    private ModelMapper mapper;
+    @Autowired
+    private BookRepo repo;
+
     @Override
     public void addBook(BookDTO dto) {
         if (repo.existsById(dto.getBookId())) {
