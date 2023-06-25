@@ -12,18 +12,16 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <div id="logo">
-            <h1><a ><span>e</span>BookCatalog</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+            <h1><a id="home" style="cursor: pointer"><span>H</span>ome</a></h1>
         </div>
 
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><a class="nav-link scrollto active" id="home" href="#hero">Home</a></li>
+<!--        <nav id="navbar" class="navbar">-->
+<!--            <ul>-->
+<!--                <li><a class="nav-link scrollto active" id="home" href="#hero">Home</a></li>-->
 
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+<!--            </ul>-->
+<!--            <i class="bi bi-list mobile-nav-toggle"></i>-->
+<!--        </nav>&lt;!&ndash; .navbar &ndash;&gt;-->
 
     </div>
 </header><!-- End Header -->
@@ -136,37 +134,41 @@
 
         <div class="col-4">
             <h1 style="color: #71c55d;font-size: 30px;">Manage Books</h1>
-            <form id="booksForm">
+            <form id="booksForm" style="position: relative;top: 125px;left: 20px;">
+                <div class="form-group">
+                    <label class="">Search </label>
+                    <input class="form-control" id="txtSearch" type="text" placeholder="Search" style="border: 2px solid #71c55d;width: 300px">
+                    <span class="control-error" id="lblSearch"></span>
+                    <button class="btn btn-primary" id="btnSearch" type="button" style="position:relative;left: 310px;top: -39px">Search</button>
+                </div>
                 <div class="form-group">
                     <label for="txtBookID">Book ID</label>
-                    <input class="form-control" id="txtBookID" type="text" name="id">
+                    <input class="form-control" id="txtBookID" type="text" name="bookId"style="border: 2px solid #71c55d">
                     <span class="control-error" id="lblbookid"></span>
                 </div>
                 <div class="form-group">
                     <label for="txtCategory">Book Category</label>
-                    <input class="form-control" id="txtCategory" type="text" name="category">
+                    <input class="form-control" id="txtCategory" type="text" name="category" style="border: 2px solid #71c55d">
                     <span class="control-error" id="lblbookcategory"></span>
                 </div>
                 <div class="form-group">
                     <label for="txtTitle">Book Title</label>
-                    <input class="form-control" id="txtTitle" type="text" name="title">
+                    <input class="form-control" id="txtTitle" type="text" name="title"style="border: 2px solid #71c55d">
                     <span class="control-error" id="lblbooktitle"></span>
                 </div>
                 <div class="form-group">
                     <label for="txtAuthor">Author</label>
-                    <input class="form-control" id="txtAuthor" type="text" name="author">
+                    <input class="form-control" id="txtAuthor" type="text" name="author"style="border: 2px solid #71c55d">
                     <span class="control-error" id="lblbookauthor"></span>
                 </div>
                 <div class="form-group">
                     <label class="">Price </label>
-                    <input class="form-control" id="txtBookPrice" type="text" name="price">
+                    <input class="form-control" id="txtBookPrice" type="text" name="price"style="border: 2px solid #71c55d">
                     <span class="control-error" id="lblbookprice"></span>
                 </div>
 
-
-
             </form>
-            <div class="btn-group" >
+            <div class="btn-group" style="position: relative;top: 87px;left: 593px" >
                 <button class="btn btn-primary" id="btnBook" type="button">Save Book</button>
                 <button class="btn btn-danger" id="btnDelete" type="button">Remove</button>
                 <button class="btn btn-warning" id="btnUpdate" type="button">Update</button>
@@ -176,7 +178,7 @@
         </div>
 
     <section class="intro" style="";>
-        <div class="bg-image h-100" style="background-color: #f5f7fa;" >
+        <div class="bg-image h-100" style="background-color: #f5f7fa;position: relative;top:100px " >
             <div class="mask d-flex align-items-center h-100" style="">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -194,7 +196,7 @@
                                                 <th scope="col">Price</th>
                                             </tr>
                                             </thead>
-                                            <tbody id="tblBook">
+                                            <tbody id="tblBook" >
 
                                             </tbody>
                                         </table>
@@ -211,5 +213,6 @@
     <script src="assets/js/main.js"></script>
      <script src="assets/js/jquery-3.6.1.min.js"></script>
     <script src="assets/js/IndexController.js"></script>
+    <script src="assets/js/BookController.js"></script>
 </body>
 </html>
