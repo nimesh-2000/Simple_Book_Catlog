@@ -56,11 +56,10 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public BookDTO searchBookByTitle(String title) {
-        return mapper.map( repo.findBookByTitle(title),BookDTO.class);
-    }
-
-    public List<Book> searchByTitleOrAuthor(String searchTerm) {
-        return repo.searchByTitleOrAuthor(searchTerm);
+    public ArrayList<BookDTO> searchBookAuthor(String author) {
+        if (!repo.existsById(author)) {
+            throw new RuntimeException("Not Available This Book...!");
+       }
+       return mapper.map(repo.searchBookAuthor(author), new TypeToken<ArrayList<BookDTO>>(){}.getType());
     }
 }

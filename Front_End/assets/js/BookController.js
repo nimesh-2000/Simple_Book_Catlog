@@ -137,9 +137,9 @@ function setTextFieldValues(id, category, title, author, price) {
 }
 
 $("#btnSearch").click(function () {
-    let searchOT = $("#searchOT").val();
+    let author = $("#txtSearch").val();
     $.ajax({
-        url: baseURL+"book/search?searchOT=" + searchOT,
+        url: baseURL+"book/search?author=" + author,
         dataType:"json",
         success: function (resp) {
             alert(resp.message);
@@ -155,3 +155,5 @@ $("#btnSearch").click(function () {
         }
     });
 });
+
+

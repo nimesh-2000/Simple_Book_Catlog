@@ -51,8 +51,9 @@ public class BookController {
 //        BookDTO book = service.searchBookByTitle(title);
 //        return new ResponseUtil("200"," Success.!",book);
 //    }
-    @GetMapping("/books/search")
-    public List<Book> searchBooks(@RequestParam("q") String searchTerm) {
-        return service.searchByTitleOrAuthor(searchTerm);
+    @GetMapping(params = "author")
+    public ResponseUtil searchBookId(String author){
+        ArrayList<BookDTO> bookDTOS = service.searchBookAuthor(author);
+        return new ResponseUtil("200","Success",bookDTOS);
     }
 }

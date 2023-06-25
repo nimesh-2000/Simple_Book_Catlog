@@ -19,7 +19,5 @@ public interface BookService {
 
     public ArrayList<BookDTO> getAllBooks();
 
-    public BookDTO searchBookByTitle(String title);
-
-    public List<Book> searchByTitleOrAuthor(String searchTerm);
+    public ArrayList<BookDTO> searchBookAuthor(String author);
 }
