@@ -12,6 +12,5 @@ import java.util.List;
  * @project Back_End
  */
 public interface BookRepo extends JpaRepository<Book,String> {
-    @Query(value = "select * from Book where author=?",nativeQuery = true)
-    List<Book> searchBookAuthor(String author);
+    Book findBookByTitle(String title);
 }

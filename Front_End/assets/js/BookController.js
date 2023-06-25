@@ -135,25 +135,40 @@ function setTextFieldValues(id, category, title, author, price) {
     $('#txtBookPrice').val(price);
     // $('#txtDate').val(date);
 }
-
+//
+// $("#btnSearch").click(function () {
+//     let titleS = $("#txtSearch").val();
+//     $("#tblBook").empty();
+//     $.ajax({
+//         url: baseURL+"book?title" + titleS,
+//         dataType:"json",
+//         async:false,
+//         success: function (resp) {
+//             alert(resp.message);
+//             // resp.data.image_1;
+//             let book=resp.data;
+//                 var row = '<tr><td>' + book.bookId + '</td><td>' + book.category + '</td><td>' + book.title + '</td><td>' + book.author + '</td><td>' + book.price + '</td></tr>';
+//                 $("#tblBook").append(row);
+//             }
+//             // loadAllCars();
+//
+//     });
+// });
 $("#btnSearch").click(function () {
-    let author = $("#txtSearch").val();
+    let titleOrAuthor = $("#txtSearch").val();
+    $("#tblBook").empty();
+    console.log(titleOrAuthor);
     $.ajax({
-        url: baseURL+"book/search?author=" + author,
-        dataType:"json",
+        url: baseURL + "book?title="+titleOrAuthor,
+        dataType: "json",
+        async: false,
         success: function (resp) {
-            alert(resp.message);
-            // resp.data.image_1;
-            for (let book of resp.data) {
-                var row = '<tr><td>' + book.bookId + '</td><td>' + book.category + '</td><td>' + book.title + '</td><td>' + book.author + '</td><td>' + book.price + '</td></tr>';
-                $("#tblBook").append(row);
-            }
-            // loadAllCars();
-        },
-        error:function (error){
-            alert(JSON.parse(error.responseText).message);
+            let book=resp.data;
+            console.log(resp.data);
+            var row = '<tr><td>' + book.bookId + '</td><td>' + book.category + '</td><td>' + book.title + '</td><td>' + book.author + '</td><td>' + book.price + '</td></tr>';
+            $("#tblBook").append(row);
+            // console.log(book);
         }
     });
 });
-
 
